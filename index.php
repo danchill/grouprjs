@@ -36,9 +36,11 @@
         url: "https://api.opentok.com/session/create"
       }).done(function( msg ) {
 
-            var jsonver = JSON.parse(xml2json(msg));
+            var jsonver = xml2json(msg);
 
-            console.log(jsonver);
+            var JSONData = JSON.parse(jsonver);
+
+            console.log(JSONData);
 
             fbref.child("streams").on("value",listStreams);
             //fbref.child("streams").push({
