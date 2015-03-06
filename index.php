@@ -26,12 +26,10 @@
 
     var streamsRef;
 
-     window.onload = function(){
 
        streamsRef = new Firebase("seshroulette.firebaseio.com");
 
        streamsRef.on("value",listStreams);
-     }
 
 
      function listStreams(e){
