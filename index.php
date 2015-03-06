@@ -7,8 +7,8 @@
       position:absolute;
       top:0px;
       left:100%;
-      width:400px;
-      margin-left:-400px;
+      width:800px;
+      margin-left:-800px;
     }
 
     .stream{
@@ -16,6 +16,8 @@
       font-size:12px;
       background-color:#f1f1f1;
       color:#000;
+      padding:4px;
+      border-bottom:1px solid #000;;
     }
 
     </style>
