@@ -2,11 +2,7 @@
 
     require_once 'lib/php/vendor/OpenTok/OpenTok.php';
 
-    $apiObj = new OpenTok($API_KEY, $API_SECRET);
-    $session = $apiObj->create_session($_SERVER["REMOTE_ADDR"],
-        array('mediaMode' => MediaMode::ROUTED));
-    $session = $apiObj->create_session();
-    //echo $session->getSessionId();
+    
 ?>
 
 <html>
