@@ -18,7 +18,9 @@
       color:#000;
       padding:4px;
       border-bottom:1px solid #000;;
+      display:block;
     }
+
 
     </style>
 
@@ -96,7 +98,7 @@
 
           console.log(streams[x]);
 
-          $("#streams").append("<span class='stream'>"+streams[x].sessionID+"</span><br />");
+          $("#streams").append("<span class='stream'>"+streams[x].sessionID+"</span>");
         }
 
       }
