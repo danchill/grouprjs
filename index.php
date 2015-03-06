@@ -1,3 +1,18 @@
+<?php
+
+require("lib/vendor/OpenTok/OpenTok.php");
+
+$apiKey = "14125532";
+$apiSecret = "6bd69c1953ba422cb7fab5fe2b5769d8f077ac1d";
+
+$opentok = new OpenTok($apiKey, $apiSecret);
+
+$session = $opentok->createSession();
+
+var_dump($session);
+
+?>
+
 <html>
   <head>
 
@@ -30,7 +45,7 @@
       var token = 'T1==cGFydG5lcl9pZD0xNDEyNTA0MSZzaWc9MzU3NWE3MzBmYmFkNTI1N2RkZjllOTU1NDkxMGJhODcyNWY2MDU1ZTpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTFfTVg0eE5ERXlOVEEwTVg1LU1UUXlNRFk1TXpBMU5EVTBOMzQxYTA5WlYyVkVVelU0V0VKc1ZGUnNMMFJ3TjFSaFFsQi1mZyZjcmVhdGVfdGltZT0xNDI1NjEzMTM5Jm5vbmNlPTAuMTIyODI1NDcyMzYyOTMzMTc=';
       var session = OT.initSession(apiKey, sessionId);
 
-      var fbref = new Firebase("http://seshroulette.firebaseio.com");
+      var fbref =
       fbref.child("streams").on("value",listStreams);
       fbref.child("streams").push({
           "sessionID":sessionId
