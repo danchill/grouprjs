@@ -31,7 +31,10 @@
       var session = OT.initSession(apiKey, sessionId);
 
       var fbref = new Firebase("http://seshroulette.firebaseio.com");
-      fbref.child("streams").push("sdfasdfasdfdf");
+      fbref.on("value",listStreams);
+      fbref.child("streams").push({
+          sessionID:session.sessionID
+      });
 
       session.on({
           //streamCreated: function(event) {
@@ -45,6 +48,18 @@
           session.publish('myPublisherDiv', {width: 320, height: 240});
         }
       });
+
+
+      funciton listStreams(e){
+        $("#streams").empty();
+        var streams = e.val();
+
+        for(x in streams){
+          $("#streams").append(streams[x].sessionID+"<br />");
+        }
+
+      }
+
     </script>
 
     <div id="streams">
