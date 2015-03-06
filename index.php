@@ -33,7 +33,7 @@
       var fbref = new Firebase("http://seshroulette.firebaseio.com");
       fbref.on("value",listStreams);
       fbref.child("streams").push({
-          "sessionID":session.sessionID
+          "sessionID":sessionId
       });
 
       session.on({
