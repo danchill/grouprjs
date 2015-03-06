@@ -31,7 +31,7 @@
       var session = OT.initSession(apiKey, sessionId);
 
       var fbref = new Firebase("http://seshroulette.firebaseio.com");
-      fbref.on("value",listStreams);
+      fbref.child("streams").on("value",listStreams);
       fbref.child("streams").push({
           "sessionID":sessionId
       });
