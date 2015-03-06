@@ -27,8 +27,9 @@
 
     <script>
 
-
+      var session = null;
       var fbref = new Firebase("https://seshroulette.firebaseio.com");
+      fbref.child("streams").on("value",listStreams);
 
       $.ajax({
         type: "POST",
@@ -40,15 +41,15 @@
             jsonver = jsonver.replace("undefined","");
 
             var JSONData = JSON.parse(jsonver);
+            session = JSONData.sessions.Session.session_id;
+            console.log(session);
 
-            console.log(JSONData);
-
-            fbref.child("streams").on("value",listStreams);
-            //fbref.child("streams").push({
-            //    "sessionID":"sss"
-            //});
+            fbref.child("streams").push({
+                "sessionID":session
+            });
 
       });
+
 
 
 
@@ -60,14 +61,6 @@
       var session = OT.initSession(apiKey);
 
       console.log(session);
-*/
-
-
-
-
-
-
-/*
 
       session.on({
           //streamCreated: function(event) {
@@ -82,7 +75,10 @@
         }
       });
 
-*/
+      */
+
+
+
       function listStreams(e){
         $("#streams").empty();
         var streams = e.val();
