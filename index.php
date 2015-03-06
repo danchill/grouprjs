@@ -58,7 +58,7 @@
       streamsRef.child("streams").push(session.sessionID);
 
 
-      var = new Firebase("https://seshroulette.firebaseio.com");
+      var streamsRef = new Firebase("https://seshroulette.firebaseio.com");
 
       streamsRef.on("value",listStreams);
 
