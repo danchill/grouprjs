@@ -37,6 +37,7 @@
       }).done(function( msg ) {
 
             var jsonver = xml2json(msg);
+            jsonver = str_replace("undefined",'',xml2json);
 
             //var JSONData = JSON.parse(jsonver);
 
