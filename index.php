@@ -6,7 +6,46 @@
 ?>
 
 <html>
-  <head></head>
+  <head>
+
+    <style type="text/css">
+
+    #streams{
+      position:absolute;
+      top:0px;
+      left:100%;
+      width:400px;
+      margin-left:-400px;
+    }
+
+    </style>
+
+    <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+
+    <script>
+     window.onload = function(){
+
+       var streamsRef = new Firebase("seshroulette.firebaseio.com");
+
+       streamsRef.on("value",listStreams);
+     }
+
+
+     function listStreams(e){
+
+       $("#streams").empty();
+
+       var streamIDs = e.val();
+
+       for(x in streamIDs){
+         $("#streams").append(streamIDs[x]+"<br />");
+       }
+
+     }
+
+    </script>
+
+  </head>
   <body>
 
     <div id='myPublisherDiv'></div>
@@ -21,6 +60,8 @@
 
       console.log(session);
 
+      streamsRef.child("streams").push(session.sessionID);
+
       session.on({
           //streamCreated: function(event) {
           //  session.subscribe(event.stream, 'subscribersDiv', {insertMode: 'append'});
@@ -34,5 +75,12 @@
         }
       });
     </script>
+
+    <div id="streams">
+
+
+
+    </div>
+
   </body>
 </html>
