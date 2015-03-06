@@ -14,6 +14,7 @@
     </style>
 
 
+    <script src="lib/js/xml2json.js"></script>
     <script src='//static.opentok.com/webrtc/v2.2/js/opentok.min.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
@@ -32,7 +33,7 @@
       headers: { 'X-TB-PARTNER-AUTH': '14125532:6bd69c1953ba422cb7fab5fe2b5769d8f077ac1d' },
       url: "https://api.opentok.com/session/create"
     }).done(function( msg ) {
-          console.log(msg);
+          console.log($.xml2json(msg));
     });
 
 
