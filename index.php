@@ -61,7 +61,17 @@
 
       });
 
+      var connect(stream){
 
+        session.connect(stream, function(error) {
+          if (error) {
+            console.log(error.message);
+          } else {
+            session.publish('myPublisherDiv', {width: 320, height: 240});
+          }
+        });
+
+      }
 
 
 
@@ -110,6 +120,7 @@
 
 
     </div>
+
 
   </body>
 </html>
