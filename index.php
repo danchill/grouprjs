@@ -55,6 +55,9 @@
         var streams = e.val();
 
         for(x in streams){
+
+          console.log(streams[x]);
+
           $("#streams").append(streams[x].sessionID+"<br />");
         }
 
