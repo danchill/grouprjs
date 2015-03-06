@@ -5,6 +5,7 @@
     $API_KEY = 14125041;
     $API_SECRET = "704e3a4b2082783f11a2856c63bf8750c89bee61";
 
+    echo $API_KEY;
 
     require_once 'lib/vendor/php/OpenTok/OpenTok.php';
 
