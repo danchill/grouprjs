@@ -11,6 +11,13 @@
       margin-left:-400px;
     }
 
+    .stream{
+      font-family:"Helvetica","Helvetica Neue",sans-serif;
+      font-size:12px;
+      background-color:#f1f1f1;
+      color:#000;
+    }
+
     </style>
 
 
@@ -87,7 +94,7 @@
 
           console.log(streams[x]);
 
-          $("#streams").append(streams[x].sessionID+"<br />");
+          $("#streams").append("<span class='stream'>"+streams[x].sessionID+"</span><br />");
         }
 
       }
