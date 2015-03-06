@@ -58,7 +58,7 @@
 
       streamsRef.on("value",listStreams);
 
-      streamsRef.child("streams").push(session.sessionID);
+      streamsRef.push(session.sessionID);
 
       session.on({
           //streamCreated: function(event) {
