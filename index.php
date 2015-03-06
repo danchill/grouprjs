@@ -9,7 +9,6 @@ $opentok = new OpenTok($apiKey, $apiSecret);
 
 $session = $opentok->createSession();
 
-var_dump($session);
 
 ?>
 
@@ -43,7 +42,9 @@ var_dump($session);
       var apiKey = '14125041';
       var sessionId = '1_MX4xNDEyNTA0MX5-MTQyMDY5MzA1NDU0N341a09ZV2VEUzU4WEJsVFRsL0RwN1RhQlB-fg';
       var token = 'T1==cGFydG5lcl9pZD0xNDEyNTA0MSZzaWc9MzU3NWE3MzBmYmFkNTI1N2RkZjllOTU1NDkxMGJhODcyNWY2MDU1ZTpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTFfTVg0eE5ERXlOVEEwTVg1LU1UUXlNRFk1TXpBMU5EVTBOMzQxYTA5WlYyVkVVelU0V0VKc1ZGUnNMMFJ3TjFSaFFsQi1mZyZjcmVhdGVfdGltZT0xNDI1NjEzMTM5Jm5vbmNlPTAuMTIyODI1NDcyMzYyOTMzMTc=';
-      var session = OT.initSession(apiKey, sessionId);
+      var session = OT.initSession(apiKey);
+
+      console.log(session);
 
       var fbref =
       fbref.child("streams").on("value",listStreams);
