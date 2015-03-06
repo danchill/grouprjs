@@ -36,7 +36,7 @@
         url: "https://api.opentok.com/session/create"
       }).done(function( msg ) {
 
-            var jsonver = JSON.parse(xml2json(msg));
+            var jsonver = xml2json(msg);
 
             console.log(jsonver);
 
