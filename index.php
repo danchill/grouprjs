@@ -2,7 +2,7 @@
 
 require("lib/vendor/OpenTok/OpenTok.php");
 
-$apiKey = "14125532";
+$apiKey = 14125532;
 $apiSecret = "6bd69c1953ba422cb7fab5fe2b5769d8f077ac1d";
 
 $opentok = new OpenTok($apiKey, $apiSecret);
