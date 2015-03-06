@@ -7,7 +7,7 @@
 
     include 'lib/vendor/OpenTok/OpenTok.php';
 
-    $apiObj = new OpenTok($API_KEY, $API_SECRET) or die("couldnt make opentok");
+    $apiObj = new OpenTok($API_KEY, $API_SECRET);
 
     /*
 
