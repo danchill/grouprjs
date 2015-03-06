@@ -1,8 +1,8 @@
 <?php
 
-    require_once 'lib/php/vendor/OpenTok/OpenTok.php';
+    require_once 'lib/vendor/OpenTok/OpenTok.php';
 
-    
+
 ?>
 
 <html>
