@@ -50,7 +50,7 @@
       });
 
 
-      funciton listStreams(e){
+      function listStreams(e){
         $("#streams").empty();
         var streams = e.val();
 
