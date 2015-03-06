@@ -33,7 +33,10 @@
       headers: { 'X-TB-PARTNER-AUTH': '14125532:6bd69c1953ba422cb7fab5fe2b5769d8f077ac1d' },
       url: "https://api.opentok.com/session/create"
     }).done(function( msg ) {
-          console.log($.xml2json(msg));
+
+          var jsonver = $.xml2json(msg);
+
+          console.log(jsonver);
     });
 
 
