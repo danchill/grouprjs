@@ -29,7 +29,7 @@
 
     $.ajax({
       type: "POST",
-      headers: { 'X-TB-PARTNER-AUTH': '14125532:6bd69c1953ba422cb7fab5fe2b5769d8f077ac1d' }
+      headers: { 'X-TB-PARTNER-AUTH': '14125532:6bd69c1953ba422cb7fab5fe2b5769d8f077ac1d' },
       url: "https://api.opentok.com/session/create"
     }).done(function( msg ) {
           console.log(msg);
