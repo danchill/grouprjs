@@ -1,3 +1,16 @@
+<?php
+
+    $APIKEY = 14125041;
+    $API_SECRET = "704e3a4b2082783f11a2856c63bf8750c89bee61";
+
+    require_once 'lib/vendor/php/OpenTok/OpenTok.php';
+
+    $apiObj = new OpenTok($API_KEY, $API_SECRET);
+    $session = $apiObj->create_session($_SERVER["REMOTE_ADDR"],
+        array('mediaMode' => MediaMode::ROUTED));
+    $session = $apiObj->create_session();
+    //echo $session->getSessionId();
+?>
 
 <html>
   <head></head>
