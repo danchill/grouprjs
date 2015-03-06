@@ -27,7 +27,7 @@
     var streamsRef;
 
 
-       streamsRef = new Firebase("seshroulette.firebaseio.com");
+       streamsRef = new Firebase("https://seshroulette.firebaseio.com");
 
        streamsRef.on("value",listStreams);
 
