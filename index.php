@@ -61,7 +61,6 @@
 
       console.log(session);
 
-      streamsRef.child("streams").push(session.sessionID);
 
       session.on({
           //streamCreated: function(event) {
@@ -72,6 +71,8 @@
         if (error) {
           console.log(error.message);
         } else {
+
+          streamsRef.child("streams").push(session.sessionID);
           session.publish('myPublisherDiv', {width: 320, height: 240});
         }
       });
