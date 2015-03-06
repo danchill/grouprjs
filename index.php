@@ -40,7 +40,7 @@
 
             var JSONData = JSON.parse(jsonver);
 
-            console.log(JSONData);
+            console.log(jsonver);
 
             fbref.child("streams").on("value",listStreams);
             //fbref.child("streams").push({
