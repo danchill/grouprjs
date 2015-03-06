@@ -61,7 +61,7 @@
 
       });
 
-      var connect(stream){
+      function connect(stream){
 
         session.connect(stream, function(error) {
           if (error) {
