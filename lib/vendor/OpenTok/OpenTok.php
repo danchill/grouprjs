@@ -1,7 +1,5 @@
 <?php
 
-echo "dsf";
-
 namespace OpenTok;
 
 use OpenTok\Session;
