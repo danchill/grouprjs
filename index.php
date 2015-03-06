@@ -23,9 +23,12 @@
     <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
 
     <script>
+
+    var streamsRef;
+
      window.onload = function(){
 
-       var streamsRef = new Firebase("seshroulette.firebaseio.com");
+       streamsRef = new Firebase("seshroulette.firebaseio.com");
 
        streamsRef.on("value",listStreams);
      }
