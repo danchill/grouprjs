@@ -38,7 +38,7 @@
 
             var jsonver = xml2json(msg);
 
-            var JSONData = JSON.parse(jsonver);
+            //var JSONData = JSON.parse(jsonver);
 
             console.log(jsonver);
 
