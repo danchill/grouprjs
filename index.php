@@ -6,8 +6,10 @@
     $API_SECRET = "704e3a4b2082783f11a2856c63bf8750c89bee61";
 
     include 'lib/vendor/OpenTok/OpenTok.php';
-    /*
+
     $apiObj = new OpenTok($API_KEY, $API_SECRET) or die("couldnt make opentok");
+
+    /*
 
     var_dump($apiObj);
 
