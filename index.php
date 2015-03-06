@@ -37,11 +37,11 @@
       }).done(function( msg ) {
 
             var jsonver = xml2json(msg);
-            jsonver = replace("undefined",'',xml2json);
+            jsonver = jsonver.replace("undefined","");
 
-            //var JSONData = JSON.parse(jsonver);
+            var JSONData = JSON.parse(jsonver);
 
-            console.log(jsonver);
+            console.log(JSONData);
 
             fbref.child("streams").on("value",listStreams);
             //fbref.child("streams").push({
